@@ -15,6 +15,13 @@ FastClick.attach(document.body)
 
 Api(Vue)
 
+// 返回
+Vue.prototype.back = (route) => {
+  const nRoute = route
+  nRoute.animate = 2
+  history.go(-1)
+}
+
 const debug = process.env.NODE_ENV !== 'production'
 Vue.config.debug = debug
 Vue.config.devtools = debug

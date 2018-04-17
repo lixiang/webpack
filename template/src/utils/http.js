@@ -2,6 +2,8 @@ import axios from 'axios'
 import qs from 'qs'
 import { timeout, baseURL } from './httpConfig'
 
+axios.defaults.withCredentials = true
+
 export function post (url, data) {
   return axios({
     method: 'post',

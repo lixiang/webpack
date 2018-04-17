@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-button type="default" @click="goLogin">默认按钮</van-button>
+    <van-button type="danger" @click="goBack">危险按钮</van-button>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { Button } from 'vant'
 
 export default {
-  name: 'home',
+  name: 'login',
   components: {
     [Button.name]: Button,
   },
@@ -18,8 +18,8 @@ export default {
   mounted() {},
   computed: {},
   methods: {
-    goLogin() {
-      this.$router.push({ path: '/login' })
+    goBack() {
+      this.back(this.$router)
     },
   },
 }
