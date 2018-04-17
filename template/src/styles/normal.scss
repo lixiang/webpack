@@ -1,0 +1,12 @@
+@for $fz from 10 through 24 {
+  .fz-#{$fz} {
+    font-size: $fz + px;
+  }
+}
+
+@for $fzb from 10 through 24 {
+  .fzb-#{$fzb} {
+    font-size: $fzb + px;
+    font-weight: bold;
+  }
+}
