@@ -27,7 +27,6 @@ export default {
       4: 下切换
        */
       const animate = this.$router.animate || to.meta.slide
-      console.log(animate)
       if (!animate) {
         this.animate = ''
       } else {
