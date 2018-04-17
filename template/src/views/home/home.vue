@@ -11,7 +11,7 @@ import { Button } from 'vant'
 export default {
   name: 'home',
   components: {
-    Button,
+    [Button.name]: Button,
   },
   data() {
     return {}

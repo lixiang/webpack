@@ -2,8 +2,6 @@ import axios from 'axios'
 import qs from 'qs'
 import { timeout, baseURL } from './httpConfig'
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 export function post (url, data) {
   return axios({
     method: 'post',

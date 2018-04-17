@@ -3,11 +3,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
+import FastClick from 'fastclick'
 import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
-import FastClick from 'fastclick'
 import Api from './utils/http'
 
 
