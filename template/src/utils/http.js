@@ -3,7 +3,7 @@ import qs from 'qs'
 import { timeout, baseURL } from './httpConfig'
 
 axios.defaults.withCredentials = true
-{{#router}}
+
 export function post(url, data) {
   return axios({
     method: 'post',

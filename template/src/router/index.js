@@ -3,8 +3,6 @@ import Router from 'vue-router'
 
 Router.prototype.animate = 0
 
-{{#router}}
-
 /**
  * Asynchronously load view
  * @subdir {string} 二级目录
