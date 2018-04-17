@@ -3,8 +3,8 @@ import qs from 'qs'
 import { timeout, baseURL } from './httpConfig'
 
 axios.defaults.withCredentials = true
-
-export function post (url, data) {
+{{#router}}
+export function post(url, data) {
   return axios({
     method: 'post',
     baseURL,
@@ -13,12 +13,12 @@ export function post (url, data) {
     timeout,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    }
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    },
   })
 }
 
-export function get (url, params) {
+export function get(url, params) {
   return axios({
     method: 'get',
     baseURL,
@@ -26,12 +26,12 @@ export function get (url, params) {
     params, // get 请求时带的参数
     timeout,
     headers: {
-      'X-Requested-With': 'XMLHttpRequest'
-    }
+      'X-Requested-With': 'XMLHttpRequest',
+    },
   })
 }
 
-export function upload (url, datas) {
+export function upload(url, datas) {
   return axios({
     method: 'post',
     baseURL,
@@ -39,14 +39,14 @@ export function upload (url, datas) {
     data: datas,
     processData: false,
     headers: {
-      'Content-Type': 'multipart/form-data'
-    }
+      'Content-Type': 'multipart/form-data',
+    },
   })
 }
 
 export default function (Vue) {
   axios.interceptors.response.use(
-    res => {
+    (res) => {
       Vue.$toast.clear()
       if (!res.data.status === 200) {
         Vue.$toast('网络连接不顺畅')
@@ -54,10 +54,10 @@ export default function (Vue) {
       }
       return res
     },
-    error => {
+    (error) => {
       Vue.$toast.clear()
       Vue.$toast('网络连接不顺畅')
       return Promise.reject(error)
-    }
+    },
   )
 }
