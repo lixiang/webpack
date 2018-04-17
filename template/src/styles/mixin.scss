@@ -1,0 +1,43 @@
+// border圆角
+@mixin border-radius($radius: $border-radius-small) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 宽高
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bg-image($url) {
+  background-image: url($url+'@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x.png');
+  }
+}
+
+// 自动省略
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 遮罩层
+@mixin mask() {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(55, 55, 55, 0.6);
+  height: 100%;
+  z-index: $zindex-modal-mask;
+  transition: opacity 0.2s ease-in;
+  pointer-events: auto;
+
+  &--hidden {
+    display: none;
+  }
+}

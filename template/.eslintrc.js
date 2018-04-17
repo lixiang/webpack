@@ -48,6 +48,13 @@ module.exports = {
     'generator-star-spacing': 'off',
     {{/if_eq}}
     {{#if_eq lintConfig "airbnb"}}
+    "semi" : [2, "never"],
+    "no-console": 0,
+    'no-shadow': 0,
+    'prefer-template': 'off',
+    'no-param-reassign': 0,
+    'arrow-body-style': 0,
+    'func-names': 0,
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',

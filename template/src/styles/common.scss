@@ -1,0 +1,28 @@
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+input, button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix {
+  display: inline-block;
+  &:after {
+    display: block;
+    content: '.';
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.lee--overflow--hidden{
+  overflow: hidden!important;
+}

@@ -1,0 +1,32 @@
+// Prefix
+$css-prefix: lee-;
+
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-big: 18px;
+
+$line-height-small: 1.2;
+$line-height-base: 1.5;
+
+$body-background: #fff;
+$title-color: #1c2438;
+$text-color: #495060;
+
+$body-background: #fff;
+$primary-color: #2d8cf0;
+$plain-color: #fff;
+
+$border-color-base: #dddee1; // outside
+$border-color-split: #e9eaec; // inside
+$border-width-default: 1px;
+$border-style-default: solid;
+
+$btn-primary-bg: $primary-color;
+$btn-default-color: rgb(31, 45, 61);
+
+$border-radius-small: 4px;
+
+$zindex-modal-mask: 990;
+$zindex-popover: 1000;
+$zindex-loading: 1070;
+$zindex-modal: 1030;
