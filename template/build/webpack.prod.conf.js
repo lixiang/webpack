@@ -11,6 +11,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+const vConsolePlugin = require('vconsole-webpack-plugin')
+
 const HappyPack = require('happypack')
 const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })

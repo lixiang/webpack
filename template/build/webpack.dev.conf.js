@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const vConsolePlugin = require('vconsole-webpack-plugin')
+
 const HappyPack = require('happypack')
 const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
