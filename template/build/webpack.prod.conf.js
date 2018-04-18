@@ -11,7 +11,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+{{#vconsole}}
 const vConsolePlugin = require('vconsole-webpack-plugin')
+{{/vconsole}}
 
 const HappyPack = require('happypack')
 const os = require('os')
