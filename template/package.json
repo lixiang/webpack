@@ -23,7 +23,7 @@
     "lint": "eslint --ext .js,.vue src{{#unit}} test/unit{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}",
     {{/lint}}
     "build": "node build/build.js",
-    "dll": "webpack --config ./build/webpack.dll.conf.js",
+    "dll": "webpack --config ./build/webpack.dll.conf.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
