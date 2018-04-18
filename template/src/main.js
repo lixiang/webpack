@@ -9,7 +9,7 @@ import App from './App'
 import router from './router'
 {{/router}}
 import Api from './utils/http'
-
+import './styles/index.scss'
 
 FastClick.attach(document.body)
 
