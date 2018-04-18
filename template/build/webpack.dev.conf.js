@@ -78,6 +78,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       context: __dirname,
       manifest: require('./vendor-manifest.json')
     }),
+    {{/if_eq}}
+    {{#vconsole}}
+    new vConsolePlugin({
+      enable: true,
+    }),
+    {{/vconsole}}
   ]
 })
 

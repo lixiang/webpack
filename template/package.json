@@ -88,6 +88,11 @@
     "nightwatch": "^0.9.12",
     "selenium-server": "^3.0.1",
     {{/e2e}}
+    {{/if_eq}}
+    {{#vconsole}}
+    "vconsole": "^3.1.0",
+    "vconsole-webpack-plugin": "^1.2.0",
+    {{/vconsole}}
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-plugin-import": "^1.4.0",

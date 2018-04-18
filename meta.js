@@ -31,7 +31,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -73,6 +73,11 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    vconsole: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vconsole for debug?',
     },
     lint: {
       when: 'isNotTest',
