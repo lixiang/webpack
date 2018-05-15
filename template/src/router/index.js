@@ -9,8 +9,8 @@ Router.prototype.animate = 0
  * @name  {string} vue文件名
  */
 function load(subdir, name) {
-  const nName = name || subdir
-  return resolve => require([`../views/${subdir}/${nName}.vue`], resolve) // eslint-disable-line
+  const view = name || subdir
+  return () => import(`@/views/${subdir}/${view}.vue`) // eslint-disable-line
 }
 
 Vue.use(Router)

@@ -8,17 +8,17 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+import store from './store'
 import Api from './utils/http'
 import './styles/index.scss'
 
 FastClick.attach(document.body)
 
-Api(Vue)
+Api()
 
 // 返回
 Vue.prototype.back = (route) => {
-  const nRoute = route
-  nRoute.animate = 2
+  route.animate = 2 //eslint-disable-line
   history.go(-1)
 }
 
@@ -33,6 +33,7 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  store,
   {{#if_eq build "runtime"}}
   render: h => h(App),
   {{/if_eq}}

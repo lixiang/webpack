@@ -44,19 +44,15 @@ export function upload(url, datas) {
   })
 }
 
-export default function (Vue) {
+export default function () {
   axios.interceptors.response.use(
     (res) => {
-      Vue.$toast.clear()
       if (!res.data.status === 200) {
-        Vue.$toast('网络连接不顺畅')
         return Promise.reject(res)
       }
       return res
     },
     (error) => {
-      Vue.$toast.clear()
-      Vue.$toast('网络连接不顺畅')
       return Promise.reject(error)
     },
   )
