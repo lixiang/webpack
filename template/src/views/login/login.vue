@@ -19,7 +19,6 @@ export default {
   computed: {},
   methods: {
     goBack() {
-      this.back(this.$router)
     },
   },
 }

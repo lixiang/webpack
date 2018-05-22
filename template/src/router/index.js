@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-Router.prototype.animate = 0
-
 /**
  * Asynchronously load view
  * @subdir {string} 二级目录
@@ -26,9 +24,6 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: load('login'),
-      meta: {
-        slide: 1,
-      },
     },
   ],
 })

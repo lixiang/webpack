@@ -16,12 +16,6 @@ FastClick.attach(document.body)
 
 Api()
 
-// 返回
-Vue.prototype.back = (route) => {
-  route.animate = 2 //eslint-disable-line
-  history.go(-1)
-}
-
 const debug = process.env.NODE_ENV !== 'production'
 Vue.config.debug = debug
 Vue.config.devtools = debug
